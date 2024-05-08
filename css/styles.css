@@ -1,0 +1,1191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #404340;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.navbar-brand {
+    font-family: "Volkhov", serif;
+    color: #484848;
+    font-size: 1.5rem;
+}
+
+.navbar-collapse {
+    font-family: "Poppins", sans-serif;
+}
+
+.item__form {
+    display: flex;
+    padding-top: 5px;
+}
+
+.nav-link-form {
+    background-color: #000;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.presentation {
+    margin-bottom: 5%;
+    padding-top: 100px;
+}
+
+.street-one {
+    display: flex;
+    justify-content: center;
+}
+
+.street-one img {
+    width: 70%;
+}
+
+.sectionindex-two article {
+    display: flex;
+    flex-direction: column;
+    font-family: "Alex Brush", cursive;
+    align-items: center;
+    padding: 35px 0px;
+}
+
+.sectionindex-two h3 {
+    margin: 7px;
+    font-size: 1.8rem;
+    color: #332d2d;
+}
+
+.lingerie-action article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.lingerie-action img {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.lingerie-action h1{
+    padding-top: 10px;
+    color: #c7bab6;
+    font-family: 'Volkhov';
+    font-size: 1.9rem;
+}
+
+.lingerie-action h2{
+    font-family: 'Volkhov';
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.lingerie-action a{
+    margin-top: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 8px 60px;
+    border-radius: 15px;
+}
+
+.lingerie-action a:hover{
+    transition-duration: 0.2s ;
+    background-color: #b5b2b2;
+}
+
+.lingerie-one {
+    display: flex;
+    justify-content: center;
+}
+
+.lingerie-one img {
+    width: 70%;
+    margin-top: 15px;
+}
+
+.section-presentation_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-presentation_text h3 {
+    font-family: 'Volkhov';
+}
+
+.section-presentation_text p {
+    font-size: 0.8rem;
+    width: 80vw;
+}
+
+.section-presentation_text a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-family: 'Poppins';
+    padding: 10px 45px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+.section-presentation_text a:hover{
+    transition-duration: 0.2s ;
+    background-color: #b5b2b2;
+}
+
+.urban-one, .lingerie-three {
+    display: flex;
+    justify-content: center;
+}
+
+.urban-one img , .lingerie-three img {
+    margin: 30px;
+    width: 70%;
+}
+
+.sessions-main h1 {
+    padding-top: 100px;
+    font-family: 'Volkhov';
+    text-align: center;
+    color: #484848;
+}
+
+.sessions-firstpart article {
+    margin-top: 20px;
+}
+
+.sessions-firstpart a {
+    text-decoration: none;
+    color: #484848;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sessions-firstpart p {
+    text-align: center;
+}
+
+.sessions-firstpart img {
+    width: 70%;
+}
+
+.sessions-secondpart {
+    margin-bottom: 40px;
+}
+
+.sessions-secondpart article {
+    margin-top: 20px;
+}
+
+.sessions-secondpart a {
+    text-decoration: none;
+    color: #484848;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sessions-secondpart img {
+    width: 70%;
+}
+
+.sessions h2{
+    text-align: center;
+    font-family: 'Volkhov';
+    font-size: 1.1rem;
+    margin: 30px 0px;
+}
+
+.portait-lingerie {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.portait-lingerie img {
+    width: 70%;
+}
+
+.row-lingerie {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row-lingerie img {
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+/*------------*/
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(115, 106, 106, 0.7);
+    z-index: 1;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 115px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    z-index: 2;
+    text-align: center;
+    overflow: auto; /* Añade scroll si es necesario */
+}
+
+#popup img {
+    max-width: calc(100% - 40px); /* Ajusta el ancho de la imagen teniendo en cuenta el padding y el espacio para el botón de cierre */
+    max-height: calc(100% - 100px); /* Ajusta la altura de la imagen teniendo en cuenta el padding superior y el espacio para el botón de cierre */
+    margin: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/*------------*/
+
+.about-me h1{
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Volkhov';
+    color: #484848;
+}
+
+
+.aboutme-section {
+    text-align: center;
+}
+
+.aboutme-info {
+    padding: 20px;
+}
+
+
+.aboutme-firstpart{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.details p {
+    font-family: 'Volkhov';
+    font-size: 0.9rem;
+}
+
+
+.aboutme-firstpart img {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+
+.aboutme-secondpart img{
+    width: 80%;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.details1 {
+    font-family: 'Volkhov';
+}
+
+.details1 h3{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.details1 p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact h1 {
+    color: #484848;
+    font-family: 'Volkhov';
+    text-align: center;
+    padding-top: 100px;
+}
+
+.contact-form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form h5 {
+    font-family: 'Volkhov';
+    text-align: center;
+    font-size: 1rem;
+}
+
+.contact-form form {
+    padding-top: 20px;
+}
+
+.form-inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-inputs article {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.form-inputs label {
+    margin-bottom: 5px;
+    font-family:  'Volkhov'; 
+}
+
+.form-inputs input {
+    width: 350px;
+    height: 35px;
+    padding: 5px;
+}
+
+.form-message{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.form-message label {
+    margin-bottom: 5px;
+    font-family:'Volkhov';
+}
+
+#message {
+    padding: 5px;
+}
+
+.form-button{
+    display: flex;
+    justify-content: center;
+}
+
+.form-button button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: #000;
+    font-family: 'Poppins';
+}
+
+.form-button button:hover {
+    transition-duration: 0.2s ;
+    background-color: #b5b2b2;
+}
+
+
+.blog h1 {
+    padding-top: 100px;
+    font-family: 'Volkhov';
+    text-align: center;
+    color: #484848;
+}
+
+.blog-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-article video {
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.blog-image img{
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.blog-text{
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    font-family: 'Volkhov';
+    color: #484848;
+    margin-top: 25px;
+}
+
+.blog-text h3 {
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.blog-text p {
+    font-size: 0.8rem;
+    display: contents;
+}
+
+hr{ 
+    margin: 2rem;
+}
+
+.blog-pax{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-pax h3{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Volkhov';
+    color: #484848;
+}
+
+.blog-image {
+    display: contents;
+}
+
+.blog-article-one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-article-one div {
+    display: contents;
+}
+
+.blog-article-one video{
+    width: 80%;
+}
+
+.video-funcional{
+    display: contents;
+}
+
+.blog-image-one {
+    display: contents;
+}
+
+.blog-image-one img{
+    margin-top: 25px;
+    width: 80%;
+}
+
+
+.blog-colaboraciones h3,p {
+    text-align: center;
+    font-family: 'Volkhov';
+    color: #484848;
+}
+
+.colaboraciones-final {
+    text-align: center;
+    margin: 25px;
+    font-family: 'Volkhov';
+    font-size: 0.9rem;
+}
+
+.colaboraciones-final a{
+    text-decoration: none;
+    color: #484848;
+}
+
+footer {
+    background-color: #625C5C;
+}
+
+footer hr{
+    margin: 1rem;
+}
+
+footer div {
+    padding: 25px;
+    color: white;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.footer-info h3 {
+    text-align: center;
+    font-family:'Volkhov' ;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-social a:hover{
+    transition-duration: 0.2s ;
+    color: #847f7f;
+}
+
+.footer-nav {
+    font-family: 'Poppins';
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 1.3rem;
+}
+
+.footer-nav li {
+    margin: 10px 20px;
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-nav a:hover{
+    transition-duration: 0.2s ;
+    color: #847f7f;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px 20px 0px;
+    color: white;
+}
+
+.copyright p {
+    margin-bottom: 0;
+    font-family: 'Poppins';
+    color: #484848;
+}
+
+/*Tablet*/
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        align-items: center;
+    }
+
+}
+
+
+/*Desktop*/
+
+@media (min-width: 1024px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar-brand {
+        font-family: "Volkhov", serif;
+        color: #484848;
+        font-size: 2rem;
+    }
+
+    .navbar-nav li {
+        margin: 5px 5px;
+    }
+
+    .nav-item a {
+        padding: 10px 10px;
+        border-radius: 6px;
+        width: 140px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+
+    .nav-link-form:hover {
+        transition-duration: 0.2s ;
+        background-color: #b5b2b2;
+        
+    }
+
+    .item__form {
+        padding-top: 0px;
+    }
+
+
+    .street-one {
+        display: flex
+    }
+
+    .street-one img {
+        width: 410px;
+    }
+
+    .lingerie-action {
+        display: flex;
+    }
+
+    .lingerie-action img {
+        width: 400px;
+        margin-bottom: 0;
+    }
+
+
+    .lingerie-one {
+        display: flex;
+    }
+
+    .lingerie-one img {
+        width: 355px;
+        margin-top: 0;
+    }
+
+    .urban-one, .lingerie-three {
+        display: flex;
+    }
+
+    .urban-one img {
+        width: 300px;
+    }
+
+    .lingerie-three img {
+        width: 300px;
+    }
+
+    .sectionindex-one{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionindex-two article {
+        font-family: "Alex Brush", cursive;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 90px 0px;
+    }
+
+    .sectionindex-two h3 {
+        margin: 20px;
+        padding: 20px;
+        font-size: 3rem;
+        color: #332d2d;
+
+    }    
+
+    .street-one , .lingerie-action , .lingerie-one{
+        margin: 15px;
+    }
+
+    .lingerie-action article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+
+    .lingerie-action h1 {
+        padding-top: 30px;
+        color: #c7bab6;
+        font-family: 'Volkhov';
+        font-size: 2.9rem;
+    }
+
+    .lingerie-action h2 {
+        font-family: 'Volkhov';
+        font-size: 2.3rem;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+
+    .lingerie-action a {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 8px 60px;
+        border-radius: 15px;
+        margin-top: 0;
+    }
+
+    .lingerie-action a:hover{
+        transition-duration: 0.2s ;
+        background-color: #b5b2b2;
+    }
+
+    .section-presentation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .section-presentation_text {
+        display: flex;
+        margin: 15px;
+        width: 25%;
+    }
+
+    .section-presentation_text h3 {
+        font-family: 'Volkhov';
+    }
+
+    .section-presentation_text p {
+        font-size: 1rem;
+        width: 19vw;
+    }
+
+    .first-sentence {
+        margin-top: 1rem;
+    }
+
+    .second-sentence {
+        margin-bottom: 3rem;
+    }
+
+    .section-presentation_text a {
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        font-family: 'Poppins';
+        padding: 10px 45px;
+        font-size: 0.8rem;
+        border-radius: 5px;
+    }
+
+    .section-presentation_text a:hover{
+        transition-duration: 0.2s ;
+        background-color: #b5b2b2;
+    }
+
+    .sessions-firstpart a {
+        text-decoration: none;
+    }
+
+    .sessions-firstpart img {
+        width: 450px;
+        height: 540px;
+    }
+
+    .sessions-secondpart a {
+        text-decoration: none;
+    }
+
+    .sessions-secondpart img {
+        width: 450px;
+        height: 540px;
+    }
+
+    .contact h1{
+        padding-top: 120px;
+    }
+
+    .sessions-main h1 {
+        padding-top: 120px;
+        font-family: 'Volkhov';
+        text-align: center;
+        color: #484848;
+    }
+
+    .sessions {
+        padding: 40px 40px 100px 40px;
+    }
+
+    .sessions h2{
+        font-size: 2rem;
+    }
+
+    .sessions-firstpart, .sessions-secondpart {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+
+    .sessions-firstpart p {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .img-sesiones{
+        transition: 1s;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .img-sesiones:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    .img-sesion{
+        transition: 1s;
+    }
+
+    .img-sesion:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    .sessions-secondpart {
+        padding-top: 60px;
+    }
+
+    .sessions-secondpart p {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .about-me h1{
+        padding-top: 120px;
+    }
+
+    .aboutme-info {
+        padding: 50px;
+    }
+
+    .aboutme-firstpart, .aboutme-secondpart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+
+    .aboutme-secondpart {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .details {
+       text-align: center;
+       margin: 10px 10px;
+       padding-top: 80px;
+       width: 30vw;
+       font-size: 1.2rem;
+    }
+
+    .details p{
+        font-size: 1.1rem;
+    }
+
+
+    .details1 {
+        text-align: center;
+        margin: 10px 50px;
+        padding-top: 80px;
+        
+    }
+
+    .details1 h3{
+        font-family: 'Volkhov';
+        margin-bottom: 30px;
+        font-size: 2.2rem;
+    }
+
+    .details1 p{
+        font-size: 1.3rem;
+    }
+
+
+    .aboutme-firstpart img, .aboutme-secondpart img {
+        width: 450px;
+    }
+
+    .blog h1 {
+        padding-top: 120px;
+        font-family: 'Volkhov';
+        text-align: center;
+        color: #484848;
+    }
+
+    .blog-info {
+        padding: 60px;
+    }
+
+    .blog-article {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 50px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .blog-article video{
+        width: 40%;
+    }
+
+    .blog-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 20%;
+    }
+
+    .blog-text h3, p {
+        font-family: 'Volkhov';
+        color: #484848;
+    }
+
+    .blog-text h3 {
+        text-decoration: underline;
+        margin-bottom: 30px;
+        font-size: 1.6rem;
+    }
+
+    .blog-text p {
+        font-size: 1.2rem;
+        display: flex;
+        text-align: left;
+    }
+
+    .blog-text video{
+        width: 40%;
+    }
+
+    hr{
+        margin: 1;
+    }
+
+    .blog-image img{
+        width: 450px;
+    }
+
+    .blog-article-one{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+        padding-top: 30px;
+    }
+
+    .blog-article-one video{
+        width: 40%;
+    }
+
+    .blog-image-one {
+        display: flex;
+    align-items: center;
+    }
+
+    .blog-image-one img {
+        width: 650px;
+    }
+
+    .blog-pax {
+        display: flex;
+    }
+
+    .blog-pax h3{
+        font-size: 2.2rem;
+        padding-top: 20px;
+        text-align: center;
+        margin-bottom: 60px;
+        font-family: 'Volkhov';
+        font-weight: bold;
+        color: #484848;
+    }
+
+
+    .blog-colaboraciones h3{
+        font-size: 2.2rem;
+        padding-top: 50px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: 'Volkhov';
+        font-weight: bold;
+        color: #484848;
+    }
+
+    .blog-colaboraciones p{
+        text-align: center;
+        margin-bottom: 50px;
+        font-family: 'Volkhov';
+        color: #484848;
+        font-size: 1.1rem;
+    }
+
+    .blog-colaboraciones a {
+        color: #484848;
+    }
+
+    .colaboraciones-final p {
+        margin-bottom: 20px;
+    }
+    
+    .title {
+        text-align: center;
+        text-decoration: underline;
+        font-family: 'Volkhov';
+        margin-bottom: 3rem;
+    }
+
+    .main-lingerie{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+     .portait-lingerie {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .portait-lingerie a {
+        width: 73%;
+    }  
+
+    
+     .row-lingerie {
+        padding: 45px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    } 
+
+     .row-lingerie img {
+        width: 23%;
+        margin: 1%;
+    } 
+
+    .contact-form h5 {
+        font-size: 1.25rem;
+    }
+
+    .form-inputs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .form-inputs article {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .form-inputs label {
+        margin-bottom: 5px;
+        font-family:  'Volkhov'; 
+    }
+    
+    .form-inputs input {
+        width: 350px;
+        height: 35px;
+        padding: 5px;
+    }
+    
+    .form-message{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .form-message label {
+        margin-bottom: 5px;
+        font-family:'Volkhov';
+    }
+    
+    #message {
+        padding: 5px;
+    }
+    
+    .form-button{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .form-button button {
+        padding: 10px 30px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        border: #000;
+        font-family: 'Poppins';
+    }
+    
+    .form-button button:hover {
+        transition-duration: 0.2s ;
+        background-color: #b5b2b2;
+    }
+    
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+
+    .footer-info h3 {
+        font-size: 2rem;
+        margin-bottom: 1px;
+    }
+
+    .footer-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .footer-nav ul {
+        flex-direction: row;
+        padding-left: 2rem;
+    }
+
+    .footer-nav li {
+        margin: 0px 20px;
+    }
+
+}
