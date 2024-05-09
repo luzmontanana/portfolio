@@ -15,7 +15,7 @@
 .navbar-brand {
     font-family: "Volkhov", serif;
     color: #484848;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .navbar-collapse {
@@ -159,7 +159,7 @@
 }
 
 .sessions-main h1 {
-    padding-top: 100px;
+    padding-top: 110px;
     font-family: 'Volkhov';
     text-align: center;
     color: #484848;
@@ -284,7 +284,7 @@
 /*------------*/
 
 .about-me h1{
-    padding-top: 100px;
+    padding-top: 110px;
     text-align: center;
     font-family: 'Volkhov';
     color: #484848;
@@ -341,7 +341,7 @@
     color: #484848;
     font-family: 'Volkhov';
     text-align: center;
-    padding-top: 100px;
+    padding-top: 110px;
 }
 
 .contact-form {
@@ -359,6 +359,8 @@
 
 .contact-form form {
     padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .form-inputs {
@@ -420,7 +422,7 @@
 
 
 .blog h1 {
-    padding-top: 100px;
+    padding-top: 110px;
     font-family: 'Volkhov';
     text-align: center;
     color: #484848;
@@ -450,6 +452,7 @@
     font-family: 'Volkhov';
     color: #484848;
     margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 .blog-text h3 {
