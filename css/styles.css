@@ -32,7 +32,7 @@
     text-decoration: none;
     padding: 7px;
     border-radius: 5px;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75)!important;
 }
 
 .presentation {
@@ -52,14 +52,14 @@
 .sectionindex-two article {
     display: flex;
     flex-direction: column;
-    font-family: "Alex Brush", cursive;
+    font-family: 'Volkhov';
     align-items: center;
     padding: 35px 0px;
 }
 
 .sectionindex-two h3 {
     margin: 7px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #332d2d;
 }
 
@@ -93,12 +93,22 @@
 }
 
 .lingerie-action a{
-    margin-top: 8px;
+    margin-top: 15px;
     text-decoration: none;
     color: white;
     background-color: black;
-    padding: 8px 60px;
+    padding: 8px 30px;
     border-radius: 15px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.btn-create {
+    margin-top: 15px;
+}
+
+.lingerie-action div a {
+    background-color: #625C5C;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 .lingerie-action a:hover{
@@ -141,6 +151,8 @@
     padding: 10px 45px;
     font-size: 0.8rem;
     border-radius: 5px;
+    margin-bottom: 25px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 .section-presentation_text a:hover{
@@ -155,6 +167,19 @@
 
 .urban-one img , .lingerie-three img {
     margin: 30px;
+    width: 70%;
+}
+
+.urban-one video {
+    width: 70%;
+}
+
+.lingerie-three {
+    margin-bottom: 45px;
+    margin-top: 25px;
+}
+
+.lingerie-three video{
     width: 70%;
 }
 
@@ -413,6 +438,8 @@
     color: white;
     border: #000;
     font-family: 'Poppins';
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+
 }
 
 .form-button button:hover {
@@ -683,6 +710,10 @@ footer div {
         margin-bottom: 0;
     }
 
+    .btn-create {
+        margin-top: 0;
+    }
+
 
     .lingerie-one {
         display: flex;
@@ -697,21 +728,26 @@ footer div {
         display: flex;
     }
 
-    .urban-one img {
-        width: 300px;
-    }
-
-    .lingerie-three img {
-        width: 300px;
-    }
+    .urban-one video {
+        width: 100%;
+    }    
 
     .sectionindex-one{
         display: flex;
         justify-content: center;
     }
 
+    .lingerie-three {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .lingerie-three video{
+        width: 100%;
+    }
+
     .sectionindex-two article {
-        font-family: "Alex Brush", cursive;
+        font-family: 'Volkhov';
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -721,7 +757,7 @@ footer div {
     .sectionindex-two h3 {
         margin: 20px;
         padding: 20px;
-        font-size: 3rem;
+        font-size: 2rem;
         color: #332d2d;
 
     }    
@@ -756,9 +792,10 @@ footer div {
         text-decoration: none;
         color: white;
         background-color: black;
-        padding: 8px 60px;
+        padding: 8px 40px;
         border-radius: 15px;
         margin-top: 0;
+        margin-bottom: 20px;
     }
 
     .lingerie-action a:hover{
@@ -804,6 +841,7 @@ footer div {
         padding: 10px 45px;
         font-size: 0.8rem;
         border-radius: 5px;
+        margin-bottom: 0;
     }
 
     .section-presentation_text a:hover{
